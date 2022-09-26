@@ -1,12 +1,27 @@
 @tailwind base;
+@tailwind components;
+
 @layer base {
   body {
-   @apply font-barlow 
+    @apply font-barlow;
+  }
+  h1 {
+    @apply text-4xl;
+    @apply font-bold;
   }
   h3 {
-    @apply text-3xl
+    @apply text-3xl;
   }
   h4 {
-    @apply text-2xl
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .card {
+    @apply w-full bg-red-400 flex flex-col shadow-2xl relative hover:cursor-pointer hover:shadow-primary;
   }
 }

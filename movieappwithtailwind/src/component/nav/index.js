@@ -23,33 +23,31 @@ const Nav = () => {
           label: item.label,
           active: true,
         };
-      }
-      else 
-      {
+      } else {
         arrayRes[index1] = {
-            label: item.label,
-            active: false,
-          };
+          label: item.label,
+          active: false,
+        };
       }
     });
-    setListItem(arrayRes)
+    setListItem(arrayRes);
   };
   const navElement = listItem.map((item, index) => {
     const result = item.active ? (
       <li
-        className="hover:cursor-pointer bg-primary text-white w-60 flex justify-end pr-2"
+        className="hover:cursor-pointer bg-primary text-white w-60 flex flex-row justify-end pr-2 items-center"
         onClick={() => handleClickNav(index)}
       >
         <h3>{item.label}</h3>
-        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-house ml-2 text-xl"></i>
       </li>
     ) : (
       <li
-        className="hover:cursor-pointer pr-2"
+        className="hover:cursor-pointer pr-2 flex flex-row justify-end items-center"
         onClick={() => handleClickNav(index)}
       >
         <h3>{item.label}</h3>
-        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-house ml-2 text-xl"></i>
       </li>
     );
     return result;
@@ -57,7 +55,7 @@ const Nav = () => {
   return (
     <nav className="col-span-1 bg-cyan-200">
       <div className="flex flex-row justify-end pr-4 items-center">
-        <h4 className="uppercase font-bold text-primary py-4 border-b-2 border-primary text-right">
+        <h4 className="uppercase font-bold text-primary py-4 border-b-2 border-primary text-right w-11/12">
           phimmoi.net
         </h4>
       </div>
