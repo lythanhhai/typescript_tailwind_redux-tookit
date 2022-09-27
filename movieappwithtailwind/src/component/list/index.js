@@ -8,7 +8,7 @@ const ListMovie = () => {
       <h2 className="text-3xl ml-10 border-primary border-b-2 py-3">
         Trending
       </h2>
-      <div className="grid grid-cols-4 gap-6 ml-10 my-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ml-10 my-10">
         <Card />
         <Card />
         <Card />
